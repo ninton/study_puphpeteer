@@ -1,5 +1,6 @@
 {
     "name": "ninton/study_puphpeteer",
+    "description": "Study PuPHPeteer",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -14,18 +15,17 @@
         },
         "process-timeout": 14400
     },
-    "require": {},
-    "require-dev": {
+    "require": {
         "monolog/monolog": "^2.2",
         "nesk/puphpeteer": "^1.6",
         "phpmd/phpmd": "^2.9",
-        "phpunit/phpunit": "^8.0",
+        "phpunit/phpunit": "^8.5",
         "squizlabs/php_codesniffer": "^3.5",
         "vlucas/phpdotenv": "^5.3"
     },
-    "autoload": {
+    "autoload-dev": {
         "psr-4": {
-            "Ninton\\StudyPuppeteer\\": "tests/"
+            "Ninton\\Test\\": "tests/"
         }
     },
     "scripts": {

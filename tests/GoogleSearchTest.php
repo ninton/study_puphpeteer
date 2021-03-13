@@ -75,7 +75,7 @@ class GoogleSearchTest extends TestCase
 
     public function screenShot(): void
     {
-        $path = __DIR__ . '/../tmp/' . strftime('%Y-%m-%s-%H-%M-%S.jpg');
+        $path = __DIR__ . '/../tmp/' . strftime('%Y-%m-%d-%H-%M-%S.jpg');
 
         $this->page->screenshot([
             'path'     => $path,

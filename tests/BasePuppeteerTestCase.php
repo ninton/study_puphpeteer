@@ -5,6 +5,7 @@ namespace Ninton\Test;
 use Nesk\Puphpeteer\Puppeteer;
 use Nesk\Puphpeteer\Resources\Browser;
 use Nesk\Puphpeteer\Resources\Page;
+use Nesk\Rialto\Data\JsFunction;
 use PHPUnit\Framework\TestCase;
 
 class BasePuppeteerTestCase extends TestCase
@@ -67,5 +68,25 @@ class BasePuppeteerTestCase extends TestCase
             'path'     => $path,
             'fullPage' => true,
         ]);
+    }
+
+    /**
+     * @param string $selector
+     */
+    protected function pageTypeClear(string $selector): void
+    {
+        $jsFunc = JsFunction::createWithBody("document.querySelector('${selector}').value = '';");
+        $this->page->evaluate($jsFunc);
+        usleep(100000);
+    }
+
+    /**
+     * @param string $selector
+     * @param string $text
+     */
+    protected function pageType(string $selector, string $text): void
+    {
+        $this->pageTypeClear($selector);
+        $this->page->type($selector, $text);
     }
 }

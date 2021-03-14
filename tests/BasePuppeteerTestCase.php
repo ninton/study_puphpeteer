@@ -8,7 +8,7 @@ use Nesk\Puphpeteer\Resources\Page;
 use Nesk\Rialto\Data\JsFunction;
 use PHPUnit\Framework\TestCase;
 
-class BasePuppeteerTestCase extends TestCase
+abstract class BasePuppeteerTestCase extends TestCase
 {
     /**
      * @var Browser

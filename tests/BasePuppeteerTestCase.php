@@ -89,4 +89,15 @@ abstract class BasePuppeteerTestCase extends TestCase
         $this->pageTypeClear($selector);
         $this->page->type($selector, $text);
     }
+
+    /**
+     * @param int $n
+     */
+    protected function selectPage(int $n): void
+    {
+        $pages = $this->browser->pages();
+        var_dump(count($pages));
+
+        $this->page = $pages[$n];
+    }
 }

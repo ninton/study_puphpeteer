@@ -66,4 +66,15 @@ abstract class BasePage
         $value = $el->getProperty('value')->jsonValue();
         return $value;
     }
+
+    /**
+     * @param string $selector
+     * @return string
+     */
+    public function pageGetText(string $selector): string
+    {
+        $el = $this->page->querySelector($selector);
+        $value = $el->getProperty('textContent')->jsonValue();
+        return $value;
+    }
 }

@@ -33,7 +33,7 @@ class AmazonTest extends BasePuppeteerTestCase
         $this->screenShot();
 
         $subTotal = $addedToCartPage->getカートの小計();
-        $this->assertEquals('￥3,080', $subTotal);
+        $this->assertEquals('3080', $subTotal);
 
         $this->assertTrue(true);
     }

@@ -24,6 +24,7 @@ class AddedToCartPage extends BasePage
         $selector = '#hlb-subcart  span.hlb-price';
         $text = $this->pageGetText($selector);
         $text = ltrim(rtrim($text));
+        $text = preg_replace('/[^-0-9]/', '', $text);
         return $text;
     }
 }

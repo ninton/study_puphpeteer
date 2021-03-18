@@ -9,6 +9,7 @@ class Jpostal100Test extends BasePuppeteerTestCase
     public function test_1000001は東京都千代田区千代田(): void
     {
         $this->page->goto('https://jpostal-1006.appspot.com/sample_1.html');
+        $this->screenShot();
 
         $this->page->type('#postcode1', '100');
         sleep(2);

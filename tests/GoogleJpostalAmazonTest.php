@@ -34,6 +34,6 @@ class GoogleJpostalAmazonTest extends BasePuppeteerTestCase
         $this->assertGoogle検索結果にあるはず('rialto-php/puphpeteer');
 
         $this->selectPage(2);
-        $this->jspotal_1000001は東京都千代田区千代田();
+        $this->jpostal_1000001は東京都千代田区千代田();
     }
 }

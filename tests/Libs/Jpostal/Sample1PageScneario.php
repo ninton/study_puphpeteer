@@ -4,7 +4,7 @@ namespace Ninton\Test\Libs\Jpostal;
 
 trait Sample1PageScneario
 {
-    private function jspotal_1000001は東京都千代田区千代田(): void
+    private function jpostal_1000001は東京都千代田区千代田(): void
     {
         $sample1Page = Sample1Page::goto($this->page);
 
